@@ -21,7 +21,7 @@ w, h = old_w - old_w % div, old_h - old_h % div
 width, height = w // div, h // div
 
 x, y = int((old_w - w) / 2), int((old_h - h) / 2),
-cropped = base.crop((x, y, x + w, y + h))
+base = base.crop((x, y, x + w, y + h))
 
 
 for i in range(div):
