@@ -39,7 +39,7 @@ def proc_blender(image_path, i, j):
 
     chunk = chunk.resize((width, height), Image.ANTIALIAS)
 
-    box = (i * width, j * height, i * width + width, j * height + height)
+    box = (i * width, j * height, (i + 1) * width, (j + 1) * height)
     src_chunk = base.crop(box)
     blend = Image.blend(src_chunk, chunk, 0.3)
     return blend, box
